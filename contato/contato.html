@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conectar Profissionais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="start">
+            <div class="logo">
+                <img src="../assets/logo.jpeg" alt="Logo da Empresa">
+            </div>
+            <nav>
+                <a href="../pagina-principal/index.html">Home</a>
+                <a href="../contato/contato.html">Profissionais</a>
+                <a href="#">Projetos</a>
+            </nav>
+        </div>
+        <div class="buttons">
+            <a href="login.html" class="login">Login</a>
+            <a href="cadastro.html" class="signup">Cadastro</a>
+        </div>
+    </header>
+
+    <!-- Filtro de Profissionais -->
+    <section class="filter-section">
+        <div class="container">
+            <form id="filterForm">
+                <h2>Filtrar Profissionais</h2>
+
+                <!-- Filtro por Experiência -->
+                <div class="filter-group">
+                    <label for="experience">Experiência (anos):</label>
+                    <select id="experience" name="experience">
+                        <option value="">Selecione...</option>
+                        <option value="5">Até 5 anos</option>
+                        <option value="10">Até 10 anos</option>
+                        <option value="15">Até 15 anos</option>
+                        <option value="20">Até 20 anos</option>
+                    </select>
+                </div>
+
+                <!-- Filtro por Profissão -->
+                <div class="filter-group">
+                    <label for="profession">Profissão:</label>
+                    <select id="profession" name="profession">
+                        <option value="">Selecione...</option>
+                        <option value="Técnico em Eletrotécnica">Técnico em Eletrotécnica</option>
+                        <option value="Engenheiro Eletricista">Engenheiro Eletricista</option>
+                        <option value="Consultor em Automação">Consultor em Automação</option>
+                        <option value="Engenheiro de Automação">Engenheiro de Automação</option>
+                    </select>
+                </div>
+
+                <!-- Filtro por Qualidades -->
+                <div class="filter-group">
+                    <label>Qualidades:</label>
+                    <label><input type="checkbox" name="qualities" value="Criativo"> Criativo</label>
+                    <label><input type="checkbox" name="qualities" value="Proativo"> Proativo</label>
+                    <label><input type="checkbox" name="qualities" value="Detalhista"> Detalhista</label>
+                    <label><input type="checkbox" name="qualities" value="Boa Comunicação"> Boa Comunicação</label>
+                </div>
+
+                <button type="submit">Filtrar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Profissionais -->
+    <section class="profissionais">
+        <div class="container">
+            <div class="cards">
+                <!-- Card de Profissional 1: João Silva -->
+                <div class="card" data-profession="Técnico em Eletrotécnica" data-experience="8" data-qualities="Criativo,Detalhista">
+                    <img src="../assets/Joao.jpg" alt="João Silva">
+                    <h3>João Silva</h3>
+                    <p><strong>Idade:</strong> 32 anos</p>
+                    <p><strong>Área de Atuação:</strong> Técnico em Eletrotécnica</p>
+                    <p><strong>Experiência:</strong> 8 anos</p>
+                    <p><strong>Formação:</strong> Técnico em Eletrotécnica, <strong>SENAI</strong></p>
+                    <p><strong>Qualidades:</strong> Criativo, detalhista, bom com prazos.</p>
+                    <!-- Link para o chat com parâmetros -->
+                    <a href="../chat/chat.html?name=João%20Silva&image=../assets/Joao.jpg" class="contact-btn">Entrar em Contato</a>
+                </div>
+
+                <!-- Card de Profissional 2: Maria Oliveira -->
+                <div class="card" data-profession="Engenheiro Eletricista" data-experience="5" data-qualities="Organizada,Proativa">
+                    <img src="../assets/Maria.jpg" alt="Maria Oliveira">
+                    <h3>Maria Oliveira</h3>
+                    <p><strong>Idade:</strong> 28 anos</p>
+                    <p><strong>Área de Atuação:</strong> Engenheira Eletricista</p>
+                    <p><strong>Experiência:</strong> 5 anos</p>
+                    <p><strong>Formação:</strong> Engenharia Elétrica, <strong>USP - Universidade de São Paulo</strong></p>
+                    <p><strong>Qualidades:</strong> Organizada, proativa, boa comunicação.</p>
+                    <!-- Link para o chat com parâmetros -->
+                    <a href="../chat/chat.html?name=Maria%20Oliveira&image=../assets/Maria.jpg" class="contact-btn">Entrar em Contato</a>
+                </div>
+
+                <!-- Card de Profissional 3: Carlos Pereira -->
+                <div class="card" data-profession="Consultor em Automação" data-experience="15" data-qualities="Estratégico,Analítico">
+                    <img src="../assets/Carlos.jpg" alt="Carlos Pereira">
+                    <h3>Carlos Pereira</h3>
+                    <p><strong>Idade:</strong> 40 anos</p>
+                    <p><strong>Área de Atuação:</strong> Consultor em Automação</p>
+                    <p><strong>Experiência:</strong> 15 anos</p>
+                    <p><strong>Formação:</strong> Engenharia de Automação, <strong>UFMG</strong></p>
+                    <p><strong>Qualidades:</strong> Estratégico, analítico, excelente em resultados.</p>
+                    <!-- Link para o chat com parâmetros -->
+                    <a href="../chat/chat.html?name=Carlos%20Pereira&image=../assets/Carlos.jpg" class="contact-btn">Entrar em Contato</a>
+                </div>
+
+                <!-- Card de Profissional 4: Roberta Lima -->
+                <div class="card" data-profession="Engenheiro Eletricista" data-experience="6" data-qualities="Rigorosa com normas técnicas,Grande capacidade analítica">
+                    <img src="../assets/Roberta.jpg" alt="Roberta Lima">
+                    <h3>Roberta Lima</h3>
+                    <p><strong>Idade:</strong> 29 anos</p>
+                    <p><strong>Área de Atuação:</strong> Engenheira Eletricista</p>
+                    <p><strong>Experiência:</strong> 6 anos</p>
+                    <p><strong>Formação:</strong> Engenharia Elétrica, <strong>USP</strong></p>
+                    <p><strong>Qualidades:</strong> Rigorosa com normas técnicas, grande capacidade analítica, boa comunicação.</p>
+                    <!-- Link para o chat com parâmetros -->
+                    <a href="../chat/chat.html?name=Roberta%20Lima&image=../assets/Roberta.jpg" class="contact-btn">Entrar em Contato</a>
+                </div>
+
+                <!-- Card de Profissional 5: Felipe Santos -->
+                <div class="card" data-profession="Técnico em Automação" data-experience="12" data-qualities="Habilidade com sistemas complexos,Resolução rápida de problemas">
+                    <img src="../assets/Felipe.jpg" alt="Felipe Santos">
+                    <h3>Felipe Santos</h3>
+                    <p><strong>Idade:</strong> 35 anos</p>
+                    <p><strong>Área de Atuação:</strong> Técnico em Automação</p>
+                    <p><strong>Experiência:</strong> 12 anos</p>
+                    <p><strong>Formação:</strong> Técnico em Automação, <strong>SENAI</strong></p>
+                    <p><strong>Qualidades:</strong> Habilidade com sistemas complexos, resolução rápida de problemas, grande conhecimento em manutenção industrial.</p>
+                    <!-- Link para o chat com parâmetros -->
+                    <a href="../chat/chat.html?name=Felipe%20Santos&image=../assets/Felipe.jpg" class="contact-btn">Entrar em Contato</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Conecte-se com Profissionais. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../contato/script.js"></script>
+</body>
+</html>

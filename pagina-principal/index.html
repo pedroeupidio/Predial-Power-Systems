@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        /* Resetando margens e preenchimento padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #292929;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            background-color: rgb(21, 21, 21);
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .start {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 100px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 0 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #1db1b6;
+            border-radius: 5px;
+        }
+
+        .buttons {
+            display: flex;
+            align-self: center;
+            justify-self: flex-end;
+            gap: 10px;
+        }
+
+        .buttons a {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons .login {
+            background-color: #424242;
+            color: white;
+        }
+
+        .buttons .login:hover {
+            background-color: #2e2e2e;
+        }
+
+        .buttons .signup {
+            background-color: #1db1b6;
+            color: white;
+        }
+
+        .buttons .signup:hover {
+            background-color: #158185;
+        }
+
+        /* Media Query para telas pequenas */
+        @media (max-width: 768px) {
+            .logo img {
+                height: 80px;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+
+        section.slider {
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            padding: 0 !important;
+            overflow: hidden;
+            border-top: 5px solid #158185;
+        }
+
+        .slider-content{
+            width: 400%;
+            height: auto;
+            display: flex;
+        }
+
+        .slider-content input {
+            display: none;
+        }
+
+        .slide-box {
+            width: 25%;
+            height: auto;
+            position: relative;
+            text-align: center;
+            transition: 1s;
+        }
+
+        .slide-box img{
+            width: 100%;
+        }
+
+        /* Alterações para os botões de navegação */
+        .nav-auto, .nav-manual {
+            position: absolute;
+            width: 100%;
+            margin-top: 35%;
+            text-align: center;
+        }
+
+        .nav-auto div, .nav-manual .manual-btn {
+            border: 1px solid #158185;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.5s;
+            width: 20px; /* Tamanho fixo para os botões */
+            height: 20px; /* Tamanho fixo para os botões */
+            display: inline-block; /* Faz com que os botões fiquem em linha */
+            margin-bottom: 10px; /* Espaço entre os dois conjuntos de botões */
+        }
+
+        /* Evitar oval no nav-manual */
+        .nav-manual .manual-btn {
+            padding: 0; /* Remove o padding extra que pode deformar o botão */
+        }
+
+        /* Centralização do nav-auto e nav-manual */
+        .nav-manual,
+        .nav-auto {
+            text-align: center;
+        }
+
+        .nav-auto div:hover, .nav-manual .manual-btn:hover {
+            background-color: #158185;
+        }
+
+        #radio1:checked ~ .nav-auto .auto-btn1,
+        #radio2:checked ~ .nav-auto .auto-btn2,
+        #radio3:checked ~ .nav-auto .auto-btn3 {
+            background-color: #158185;
+        }
+
+        #radio1:checked ~ .primeiro{
+            margin-left: 0%;
+        }
+
+        #radio2:checked ~ .primeiro{
+            margin-left: -25%;
+        }
+
+        #radio3:checked ~ .primeiro{
+            margin-left: -50%;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="start">
+        <div class="logo">
+            <img src="../assets/logo.jpeg" alt="Logo da Empresa">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="../contato/contato.html">Profissionais</a>
+            <a href="#">Projetos</a>
+        </nav>
+    </div>
+    <div class="buttons">
+        <a href="login.html" class="login">Login</a>
+        <a href="cadastro.html" class="signup">Cadastro</a>
+    </div>
+</header>
+
+<section class="slider">
+    <div class="slider-content">
+        <input type="radio" name="btn-radio" id="radio1">
+        <input type="radio" name="btn-radio" id="radio2">
+        <input type="radio" name="btn-radio" id="radio3">
+
+        <div class="slide-box primeiro">
+            <img src="../assets/slide1.jpg" alt="slide1">
+        </div>
+        <div class="slide-box">
+            <img src="../assets/slide2.jpg" alt="slide2">
+        </div>
+        <div class="slide-box">
+            <img src="../assets/slide3.jpeg" alt="slide3">
+        </div>
+
+        <div class="nav-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+        </div>
+
+        <div class="nav-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    var cont = 1;
+    var radioButtons = document.querySelectorAll('.manual-btn');
+
+    document.getElementById('radio1').checked = true;
+
+    // Alterar a imagem a cada 5 segundos
+    setInterval(() => {
+        proximaImg();
+    }, 5000);
+
+    // Função para passar para a próxima imagem
+    function proximaImg() {
+        cont++;
+        if (cont > 3) cont = 1;
+        atualizarSlider(cont);
+    }
+
+    // Atualizar o slider para a imagem correspondente
+    function atualizarSlider(cont) {
+        document.getElementById('radio' + cont).checked = true;
+    }
+
+    // Adicionar controle manual para os botões de navegação
+    radioButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            cont = index + 1;
+            atualizarSlider(cont);
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #0c5c5f;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    color: white;
+    font-size: 1.5em;
+}
+
+header .back-btn {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+/* Janela de chat */
+.chat-window {
+    background-color: #424242;
+    padding: 20px;
+    border-top: 3px solid #158185;
+    min-height: 80vh;
+    padding-bottom: 60px; /* Para dar espaço para o input fixo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Mantém o cabeçalho no topo e o chat na parte inferior */
+}
+
+/* Cabeçalho do chat (Nome e Imagem do Profissional) */
+.chat-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chat-header img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.chat-header h3 {
+    font-size: 1.5em;
+    color: white;
+}
+
+/* Mensagens do chat */
+.chat-messages {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Faz as mensagens ocuparem o restante da área disponível */
+}
+
+/* Mensagens individuais */
+.chat-message {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message p {
+    margin: 0;
+    padding: 8px 15px;
+    background-color: #0c5c5f;
+    border-radius: 8px;
+    max-width: 60%;
+    word-wrap: break-word;
+}
+
+.chat-message.professional p {
+    background-color: #0c5c5f;
+    align-self: flex-start;
+}
+
+.chat-message.user p {
+    background-color: #0c5c5f;
+    align-self: flex-end;
+    color: white;
+}
+
+/* Caixa de input e botões fixos na parte inferior */
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #424242;
+    padding: 10px 20px;
+    border-top: 2px solid #158185;
+    z-index: 100;
+}
+
+.chat-input input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.chat-input button {
+    background-color: #128C7E;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.chat-input button:disabled {
+    background-color: #ddd;
+}
+
+.chat-input button:hover {
+    background-color: #158185;
+}
